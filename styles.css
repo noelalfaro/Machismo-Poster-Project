@@ -1,0 +1,841 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* adjust typography defaults */
+  body {
+  /*   margin: 1rem; */
+    font-family: sans-serif;
+    line-height: 1.2;
+    background: black;
+    color: white;
+    font-family:'Teko', sans-serif;
+    height:300vh;
+  }
+  
+  
+  /* Mobile */
+  
+  .header{
+    margin:0 auto;
+    display:flex;
+    width:90vw;
+    height:10vh;
+  /*   background: blue; */
+  }
+  
+  
+  #logo{
+    width:10px;
+    height:6vh;
+    background:red;
+    margin: 2vh auto;
+  }
+  
+  
+  
+  #logo::before{
+    content:"";
+    position: absolute;
+    width:10px;
+    height:6vh;
+    background:red;
+    transform: rotate(60deg);
+  }
+  
+  #logo::after{
+    content:"";
+    position: absolute;
+    width:10px;
+    height:6vh;
+    background:red;
+    transform: rotate(125deg);
+  }
+  
+  
+  @keyframes logoAnimation {
+    0%   {transform:rotate(0deg);}
+    10%  {transform:rotate(18deg);}
+    20%  {transform:rotate(36deg);}
+    30%  {transform:rotate(54deg);}
+    40%  {transform:rotate(72deg);}
+    50%  {transform:rotate(90deg);}
+    60%  {transform:rotate(108deg);}
+    70%  {transform:rotate(126deg);}
+    80%  {transform:rotate(144deg);}
+    90%  {transform:rotate(162deg);}
+    100% {transform:rotate(180deg);}
+  }
+  
+  #logo:hover{
+    animation:logoAnimation .5s infinite ease-in-out;
+    cursor:pointer;
+  }
+  
+  
+  .container{
+    heigth: 450vh;
+    width:90vw;
+    margin: 2vh 5vw;
+  /*   display:flex; */
+  /*   background: blue; */
+  }
+  
+  .menuContainer{
+    height:100vh;
+    width: 90vw;
+  /*   background:green; */
+  }
+  
+  .menu{
+    height: 100vh;
+    width:80vw;
+  /*   background:yellow; */
+  /*   position:sticky; */
+    top:10vh;
+  }
+  
+  .title{
+    font-size:84px;
+    font-family: 'Teko', sans-serif;
+    text-align:left;
+    font-weight: 900;
+    animation:menuOptionsOne 2s infinite;
+  }
+  
+  @keyframes menuOptionsOne {
+    0%   {transform:scale(100%)}
+    20%  {transform:scale(101%)}
+    50%  {transform:scale(102%)}
+    70%  {transform:scale(101%)}
+    100% {transform:scale(100%)}
+  }
+  
+  @keyframes menuOptionsTwo {
+    0%   {color: #7d120a;transform:scale(104%)}
+    20%  {color: #bf281d;transform:scale(105%)}
+    50%  {color: #a31d14;transform:scale(106%)}
+    70%  {color: #bf281d;transform:scale(105%)}
+    100% {color: #7d120a;transform:scale(104%)}
+  }
+  .title:hover{
+    animation: menuOptionsTwo 2s infinite;
+    cursor: pointer;
+  }
+  
+  
+  .gallery{
+  /*   background:red; */
+    margin-top: 5vh;
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .photo{
+    padding: 1vh;
+    width:80vw;
+    cursor:pointer;
+    transition:transform .2s ease-in-out;
+    margin:0 auto;
+  }
+  
+  .photo:hover{
+    transform:scale(102%);
+  }
+  
+  .message{
+    margin:0;
+    padding-top:0;
+  }
+  
+  #machismoMessage{
+    text-align:left;
+    font-size:32px;
+  }
+  
+  #misoginiaMessage{
+    font-size:36px;
+    text-align:left;
+  }
+  
+  #mataMessage{
+    font-size:32px;
+    text-align:left;
+  }
+  
+  #mujeresMessage{
+    text-align:left;
+    font-size:24px;
+  }
+  
+  #back{
+    height: 4vh;
+    width:30vw;
+    font-size:32px;
+    color:black;
+    text-align:left;
+  /*   text-decoration:underline; */
+    cursor:pointer;
+    margin-bottom:2vh;
+    background:red;
+  }
+  
+  #powerQuote{
+    text-align:left;
+    font-size: 24px;
+  /*   height: 65vh; */
+    width:80vw;
+    margin:0 auto;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  
+  #domesticQuote{
+    text-align:left;
+    font-size: 24px;
+  /*   height: 65vh; */
+    width:80vw;
+    margin:0 auto;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  
+  
+  #protestsQuote{
+    text-align:left;
+    font-size: 24px;
+  /*   height: 65vh; */
+    width:80vw;
+    margin:0 auto;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */  
+  }
+  
+  
+  #familyQuote{
+    text-align:left;
+    font-size: 24px;
+  /*   height: 65vh; */
+    width:80vw;
+    margin:0 auto;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  .quoteLink{
+    color: red;
+  }
+  .bottomMessage{
+    height:40vh;
+    width:90vw;
+    margin: 10vh 5vw;
+  /*   background:red; */
+    display:flex;
+  }
+  
+  
+  .bottomDiv{
+    width:25vw;
+    height:40vh;
+  /*   background:blue; */
+  }
+  
+  
+  .bottomQuote{
+    font-size:12px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:15vw;
+    animation:quoteOptions 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  .bottomQuoteTwo{
+    font-size:12px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:15vw;
+    animation:quoteOptions2 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  
+  .bottomQuoteEn{
+    font-size:12px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:5vh;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+     
+  
+  .bottomQuoteEnTwo{
+    font-size:12px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:5vh;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+  
+  @keyframes quoteOptions {
+    0%   {transform:scale(100%);transform:rotate(5deg)}
+    20%  {transform:scale(101%);transform:rotate(-5deg)}
+    50%  {transform:scale(102%);transform:rotate(5deg)}
+    70%  {transform:scale(101%);transform:rotate(-5deg)}
+    100% {transform:scale(100%);transform:rotate(5deg)}
+  }
+  
+  @keyframes quoteOptions2 {
+    0%   {transform:scale(100%);transform:rotate(-5deg)}
+    20%  {transform:scale(101%);transform:rotate(5deg)}
+    50%  {transform:scale(102%);transform:rotate(-5deg)}
+    70%  {transform:scale(101%);transform:rotate(5deg)}
+    100% {transform:scale(100%);transform:rotate(-5deg)}
+  }
+  
+  .bottomQuote:hover{
+    animation: menuOptionsTwo 2s infinite;
+    cursor: pointer;
+  }
+  
+  .bottomQuoteTwo:hover{
+    animation: menuOptionsTwo 2s infinite;
+    cursor: pointer;
+  }
+  
+  
+  #mainPhoto{
+    width:40vw;
+    margin: 8vh auto;
+    transition:transform .2s ease-in-out;
+  }
+  
+  
+  #mainPhoto:hover{
+    cursor:pointer;
+    transform:scale(102%);
+  }
+  
+  
+  #femicideVideo{
+    margin:8vh auto;
+  }
+  
+  .iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  #videoExit{
+    color:red;
+    font-size:32px;
+    text-decoration: underline;
+    text-align:left;
+    width:85vw;
+    padding:1vw;
+  /*   background:blue; */
+  }
+  
+  #videoExit:hover{
+    cursor:pointer;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Tablet */
+  @media screen and (min-width : 600px) {
+    #mainPhoto{
+    width:30vw;
+    margin: 8vh auto;
+    transition:transform .2s ease-in-out;
+    }
+    
+    
+    
+    .bottomMessage{
+    height:60vh;
+    width:90vw;
+    margin: 10vh 5vw;
+  /*   background:red; */
+    display:flex;
+  }
+  
+  
+  .bottomDiv{
+    width:25vw;
+    height:40vh;
+  /*   background:blue; */
+  }
+  
+  
+  .bottomQuote{
+    font-size:24px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:15vw;
+    animation:quoteOptions 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  .bottomQuoteTwo{
+    font-size:24px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:15vw;
+    animation:quoteOptions2 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  
+  .bottomQuoteEn{
+    font-size:24px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:5vh;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+     
+  
+  .bottomQuoteEnTwo{
+    font-size:24px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin-top:5vh;
+    margin-bottom:5vh;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Desktop */
+  @media screen and (min-width : 1080px) {
+  
+  .header{
+    margin:0 auto;
+    display:flex;
+    width:90vw;
+    height:10vh;
+  /*   background: blue; */
+  }
+  
+  #logo{
+    width:10px;
+    height:6vh;
+    background:red;
+    margin: 2vh auto;
+  }
+  
+  
+  
+  #logo::before{
+    content:"";
+    position: absolute;
+    width:10px;
+    height:6vh;
+    background:red;
+    transform: rotate(60deg);
+  }
+  
+  #logo::after{
+    content:"";
+    position: absolute;
+    width:10px;
+    height:6vh;
+    background:red;
+    transform: rotate(125deg);
+  }
+  
+  
+  @keyframes logoAnimation {
+    0%   {transform:rotate(0deg);}
+    10%  {transform:rotate(18deg);}
+    20%  {transform:rotate(36deg);}
+    30%  {transform:rotate(54deg);}
+    40%  {transform:rotate(72deg);}
+    50%  {transform:rotate(90deg);}
+    60%  {transform:rotate(108deg);}
+    70%  {transform:rotate(126deg);}
+    80%  {transform:rotate(144deg);}
+    90%  {transform:rotate(162deg);}
+    100% {transform:rotate(180deg);}
+  }
+  
+  #logo:hover{
+    animation:logoAnimation .5s infinite ease-in-out;
+    cursor:pointer;
+  }
+  
+  .container{
+    heigth: 250vh;
+    width:90vw;
+    margin: 8vh 5vw;
+    display:flex;
+  /*   background: red; */
+  }
+  
+  .menuContainer{
+    height:300vh;
+    width: 40vw;
+  /*   background:green; */
+  }
+  
+  .menu{
+    heigth: 100vh;
+    width:40vw;
+  /*   background:yellow; */
+    position:sticky;
+    top:10vh;
+  }
+  
+  .title{
+    font-size:84px;
+    font-family: 'Teko', sans-serif;
+    text-align:left;
+    font-weight: 900;
+  }
+  
+  @keyframes menuOptions {
+    0%   {color: #7d120a; transform:scale(100%)}
+    20%  {color: #bf281d;transform:scale(101%)}
+    50%  {color: #a31d14;transform:scale(102%)}
+    70%  {color: #bf281d;transform:scale(101%)}
+    100% {color: #7d120a;transform:scale(100%)}
+  }
+  .title:hover{
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+  }
+  
+  .gallery{
+  /*   background:red; */
+    margin-left: 10vw;
+  }
+  
+  .photo{
+    margin-bottom: 20vh;
+    width:40vw;
+    cursor:pointer;
+    transition:transform .2s ease-in-out;
+  }
+  
+  .photo:hover{
+    transform:scale(102%);
+  }
+  
+  .message{
+    margin:0;
+    padding-top:0;
+  }
+  
+  #machismoMessage{
+    text-align:left;
+    font-size:40px;
+  }
+  
+  #misoginiaMessage,#mataMessage{
+    font-size:48px;
+    text-align:left;
+  }
+  
+  #mujeresMessage{
+    text-align:left;
+    font-size:36px;
+  }
+  
+  #back{
+    height: 4vh;
+    width:7.5vw;
+    font-size:32px;
+    color:black;
+    text-align:left;
+  /*   text-decoration:underline; */
+    cursor:pointer;
+    margin-bottom:2vh;
+    background:red;
+  }
+  
+  
+  #powerQuote{
+    text-align:center;
+    font-size: 40px;
+    height: 65vh;
+    width:40vw;
+    margin-bottom:10vh;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  
+  #domesticQuote{
+    text-align:center;
+    font-size: 32px;
+    height: 65vh;
+    width:40vw;
+    margin-bottom:10vh;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  
+  
+  #protestsQuote{
+    text-align:center;
+    font-size: 30px;
+    height: 65vh;
+    width:40vw;
+    margin-bottom:10vh;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */  
+  }
+  
+  
+  #familyQuote{
+    text-align:center;
+    font-size: 36px;
+    height: 65vh;
+    width:40vw;
+    margin-bottom:10vh;
+    padding:5vh 2vw;
+    cursor:pointer;
+  /*   background:red; */
+  }
+  
+  .quoteLink{
+    color: red;
+  }
+  
+  
+  
+  .bottomMessage{
+    height:102vh;
+    width:90vw;
+    margin: 0 5vw;
+  /*   background:red; */
+    display:flex;
+  }
+  
+  
+  .bottomDiv{
+    width:20vw;
+    height:100vh;
+  /*   background:blue; */
+  }
+  
+  
+  .bottomQuote{
+    font-size:48px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin:10vh 0 8vh 3vw;
+    animation:quoteOptions 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  .bottomQuoteTwo{
+    font-size:48px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin:10vh 3vw 8vh 0;
+    animation:quoteOptions2 4s infinite;
+    width:100%;
+    cursor: pointer;
+  }
+  
+  
+  .bottomQuoteEn{
+    font-size:45px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin:8vh 3vw 8vh 0;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+     
+  
+  .bottomQuoteEnTwo{
+    font-size:45px;
+    font-family: 'Teko', sans-serif;
+    text-align:center;
+    font-weight: 500;
+    margin:8vh 3vw 8vh 0;
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+    width:100%;
+  }
+  
+  
+  @keyframes quoteOptions {
+    0%   {transform:scale(100%);transform:rotate(5deg)}
+    20%  {transform:scale(101%);transform:rotate(-5deg)}
+    50%  {transform:scale(102%);transform:rotate(5deg)}
+    70%  {transform:scale(101%);transform:rotate(-5deg)}
+    100% {transform:scale(100%);transform:rotate(5deg)}
+  }
+  
+  @keyframes quoteOptions2 {
+    0%   {transform:scale(100%);transform:rotate(-5deg)}
+    20%  {transform:scale(101%);transform:rotate(5deg)}
+    50%  {transform:scale(102%);transform:rotate(-5deg)}
+    70%  {transform:scale(101%);transform:rotate(5deg)}
+    100% {transform:scale(100%);transform:rotate(-5deg)}
+  }
+  
+  .bottomQuote:hover{
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+  }
+  
+  .bottomQuote2:hover{
+    animation: menuOptions 2s infinite;
+    cursor: pointer;
+  }
+  
+  #mainPhoto{
+    width:40vw;
+    margin: 8vh auto;
+    transition:transform .2s ease-in-out;
+  }
+  
+  #mainPhoto:hover{
+    cursor:pointer;
+    transform:scale(102%);
+  }
+  
+  
+  #femicideVideo{
+    margin:8vh auto;
+  }
+  
+  .iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  #videoExit{
+    color:red;
+    font-size:32px;
+    text-decoration: underline;
+    text-align:left;
+    width:85vw;
+    padding:1vw;
+  /*   background:blue; */
+  }
+  
+  #videoExit:hover{
+    cursor:pointer;
+  }
+    
+  }
