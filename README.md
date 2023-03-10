@@ -2,7 +2,7 @@
 
 With the theme of resistance, created a website acting as a digital poster.
 
-I combined html/css with javascript to make an interactive & responsive site that speaks about the dangerous consequences of machismo and misogyny in Latin America.
+I combined html/css with javascript to make an interactive & responsive site that speaks about the dangerous consequences of machismo and misogyny in Latin America. I provide English and Spanish translations throughout the site to be able to get the message across to more people.
 
 [live site](https://web-poster-noel.glitch.me/)
 ## Video Walkthrough
